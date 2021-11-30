@@ -29,7 +29,7 @@ return [
     ],
     'computed' => [
         'value' => function () {
-            return Sane::sanitize(trim($this->value), 'html');
+            return Sane::sanitize(trim($this->value ?? ''), 'html');
         }
     ],
 ];

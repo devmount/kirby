@@ -162,6 +162,9 @@ class Api
      */
     public function call(string $path = null, string $method = 'GET', array $requestData = [])
     {
+        // make sure $path is string
+        $path ??= '';
+
         $path = rtrim($path, '/');
 
         $this->setRequestMethod($method);
